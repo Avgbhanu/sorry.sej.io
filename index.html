@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry my sejjipie</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #e982ca, #e6410a);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #333;
+    }
+
+    .letter {
+      font-size: 5em;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .letter:hover {
+      transform: scale(1.2);
+    }
+
+    .heart-container,
+    .bouquet,
+    .extra-flowers,
+    .click-hint {
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .heart-container.show,
+    .bouquet.show,
+    .extra-flowers.show,
+    .click-hint.show {
+      opacity: 1;
+    }
+
+    .heart {
+      font-size: 4em;
+      color: rgb(255, 0, 170);
+      animation: pulse 1s infinite;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 1.5em;
+      color: #444444;
+    }
+
+    .bouquet {
+      font-size: 2.5em;
+      line-height: 1.5;
+      cursor: pointer;
+      animation: fadeInUp 1s ease;
+    }
+
+    .extra-flowers {
+      font-size: 2em;
+      line-height: 1.5;
+      animation: fadeInUp 1s ease;
+    }
+
+    .click-hint {
+      font-size: 1em;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 12px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I'm Sorry sejjipie 💗</h1>
+  <div class="letter" id="openLetter">✉️</div>
+
+  <div class="heart-container" id="heartContainer">
+    <div class="heart">❤️</div>
+    <div class="message">I'm sorry — truly, deeply. I know I mess up, but please know this: there is no one else I want but you.
+
+        You’re my home, my heart, my forever.
+        I want to build a life with you — filled with laughter, little feet running around, morning cuddles,late night dinners everything sej..i love you the most..my precious angel
+        
+        i wanna have it all. A family. A future. A forever.
+        Just you and me. Always.
+        
+        Please forgive me, my love n my kuchhu puchhu.
+        I’m holding your hand — in my heart — and never letting go.
+        
+        ❤️</div>
+  </div>
+
+  <div class="bouquet" id="bouquet">
+    🌷🌷🌷<br>
+    🌷🌷🌷🌷<br>
+    🌷🌷🌷<br>
+  </div>
+  <div class="click-hint" id="clickHint">Click me 🌸</div>
+
+  <div class="extra-flowers" id="extraFlowers">
+    💐🌼🌸🌺🌻<br>
+    🌷🌹🌸🌼🌻💐<br>
+    🌺🌻🌹🌼🌸
+  </div>
+
+  <script>
+    const letter = document.getElementById('openLetter');
+    const heartContainer = document.getElementById('heartContainer');
+    const bouquet = document.getElementById('bouquet');
+    const clickHint = document.getElementById('clickHint');
+    const extraFlowers = document.getElementById('extraFlowers');
+
+    letter.addEventListener('click', () => {
+      heartContainer.classList.add('show');
+      bouquet.classList.add('show');
+      clickHint.classList.add('show');
+    });
+
+    bouquet.addEventListener('click', () => {
+      extraFlowers.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>
